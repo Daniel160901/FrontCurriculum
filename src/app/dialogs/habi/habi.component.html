@@ -1,0 +1,13 @@
+<div class="container">
+    <h2 mat-dialog-title>Crear habilidad nueva</h2>
+<mat-dialog-content>
+    Nombre de la habilidad: <br>
+    <input #hab type="text" placeholder="Inserte el nombre de la habilidad"> <br>
+    Porcentaje: <br>
+    <input #por type="text" placeholder="Inserte el porcentaje que domina"> <br>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button (click)="createHab(1,hab.value,por.value,1)" mat-dialog-close>ENVIAR</button> &nbsp;&nbsp;
+    <button type="button" mat-dialog-close>CANCELAR</button>
+</mat-dialog-actions>
+</div>

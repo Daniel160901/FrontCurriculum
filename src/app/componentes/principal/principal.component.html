@@ -1,0 +1,23 @@
+<section class="margen">
+    <div class="container" id="present">
+        <div style="height: 350px; width: auto;">
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="../../../assets/images/foto.jpg"
+                        style="width: 90%; height: 90%; border-radius: 50%; margin-top: 27px;">
+                </div>
+                <div class="col-sm-9" *ngIf="perfil">
+                    <strong>
+                        <p style="font-size: 100px; color: #fff; height: auto; position: relative; line-height: 130px;">
+                            {{perfil.nombre}} {{perfil.apPaterno}} {{perfil.apMaterno}}</p>
+                    </strong>
+                    <strong>
+                        <p style="font-size: 50px; color: #000; height: auto; position: relative;">Programador / WEB
+                            Developer</p>
+                    </strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

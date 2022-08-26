@@ -1,0 +1,15 @@
+<div class="container">
+    <h2 mat-dialog-title>Crear contacto nuevo</h2>
+<mat-dialog-content>
+    Tipo de contacto: <br>
+    <input #tipo type="text" placeholder="Ej: Gmail"> <br>
+    Contenido: <br>
+    <input #con type="text" placeholder="Inserte el contenido"> <br>
+    Foto: <br>
+    <input #foto type="text" placeholder="Inserte el URL de la imagen"> <br>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button (click)="createContact(1,tipo.value,con.value,foto.value)" mat-dialog-close>ENVIAR</button> &nbsp;&nbsp;
+    <button type="button" mat-dialog-close>CANCELAR</button>
+</mat-dialog-actions>
+</div>

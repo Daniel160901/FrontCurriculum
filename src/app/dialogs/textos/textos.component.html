@@ -1,0 +1,11 @@
+<div class="container">
+    <h2 mat-dialog-title>Crear texto nuevo</h2>
+<mat-dialog-content>
+    Texto: <br>
+    <input #ident type="text" placeholder="Inserte el nuevo texto">
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button (click)="createTexto(1,ident.value)" mat-dialog-close>ENVIAR</button> &nbsp;&nbsp;
+    <button type="button" mat-dialog-close>CANCELAR</button>
+</mat-dialog-actions>
+</div>

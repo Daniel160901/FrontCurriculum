@@ -1,0 +1,21 @@
+<section id="educ">
+    <div class="container" style="font-size: 20px; width: auto; display: flex;">
+        <div class="font">
+            <div class="contenedor">
+                <h1>EDUCACIÓN</h1>
+            </div>
+            <hr>
+            <br>
+            <div *ngFor="let escuela of escuelas">
+                <div class="escInfo" id="inf">
+                    <strong> {{escuela.nombreEscuela}}</strong><br>
+                    {{escuela.generacion}} <br>
+                    {{escuela.tipo}} <br>
+                    {{escuela.comentario}} <br>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+    <br>
+</section>

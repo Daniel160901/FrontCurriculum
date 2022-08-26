@@ -1,0 +1,24 @@
+<section id="contac">
+    <div class="container" style="height: 600px;">
+        <div class="contenedor">
+            <h1>CONTÁCTAME</h1>
+        </div>
+        <hr>
+        <br>
+
+        <div class="perso">
+            <div style="display: flex;" *ngFor="let contacto of contactos">
+                <div class="font">
+
+                    <img src={{contacto.foto}} alt="">&nbsp;&nbsp;{{contacto.info}} <br>
+                </div>
+            </div>
+        </div>
+        <div class="mapa">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d233.33640371287174!2d-87.07820596688502!3d20.654013484967546!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1654046457254!5m2!1ses!2smx"
+                width="600px" height="380px " style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>

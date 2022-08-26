@@ -1,0 +1,22 @@
+<section id="habil">
+    <div class="container">
+        <h1>HABILIDADES</h1>
+        <hr>
+        <br>
+        <div *ngFor="let habilidad of habilidades">
+            <div>
+                <div class="contenedor">
+                    <h4>{{habilidad.nombreHabilidad}}</h4>
+                </div>
+                <div *ngFor="let tipoHabilidad of tipoHabilidades">
+                    <div *ngIf="tipoHabilidad.habilidad==habilidad.idHabilidad" style="display: flex;">
+                        <ul>
+                            <li class="font">{{tipoHabilidad.nombreTipo}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<progress max="100" value={{tipoHabilidad.porcentaje}}></progress></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</section>

@@ -1,0 +1,17 @@
+<div class="container">
+    <h2 mat-dialog-title>Crear escuela nueva</h2>
+<mat-dialog-content>
+    Nombre de la escuela: <br>
+    <input #ident type="text" placeholder="Inserte el nombre de la escuela"> <br>
+    Generación: <br>
+    <input #gen type="text" placeholder="Inserte su generación"> <br>
+    Nivel educativo: <br>
+    <input #niv type="text" placeholder="Inserte el nivel de estudios"> <br>
+    Comentarios: <br>
+    <input #com type="text" placeholder="Inserte sus comentarios"> <br>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button (click)="createEdu(1,ident.value,gen.value,niv.value,com.value)" mat-dialog-close>ENVIAR</button> &nbsp;&nbsp;
+    <button type="button" mat-dialog-close>CANCELAR</button>
+</mat-dialog-actions>
+</div>

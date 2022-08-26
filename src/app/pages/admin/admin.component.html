@@ -1,0 +1,132 @@
+<app-header></app-header>
+
+<section class="margen">
+    <div class="container" id="present">
+        <div style="height: 350px; width: auto;">
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="../../../assets/images/foto.jpg"
+                        style="width: 90%; height: 90%; border-radius: 50%; margin-top: 27px;">
+                </div>
+                <div class="col-sm-9" *ngIf="perfil">
+                    <strong>
+                        <p style="font-size: 100px; color: #fff; height: auto; position: relative; line-height: 130px;">
+                            {{perfil.nombre}} {{perfil.apPaterno}} {{perfil.apMaterno}}</p>
+                    </strong>
+                    <strong>
+                        <p style="font-size: 50px; color: #000; height: auto; position: relative;">Programador / WEB
+                            Developer</p>
+                    </strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section id="perf">
+    <div class="container">
+        <div class="contenedor">
+            <h1>PERFIL</h1> <button (click)="openDialog()">Nuevo</button>
+        </div>
+        <hr>
+        <br>
+        <div class="font" *ngFor="let textos of texto">
+            <p>{{textos.texto}}</p>
+            <div class="butons">
+                <button type="submit" class="btn btn-danger" (click)="deleteTexto(textos.idTexto)">Delete</button>
+                &nbsp; 
+                <button type="submit" class="btn btn-dark" (click)="openDialogT(textos.idTexto, textos.texto)">Edit</button>
+                
+            </div>
+            <br>
+        </div>
+        <br>
+    </div>
+</section>
+
+<section id="educ">
+    <div class="container" style="font-size: 20px; width: auto; display: flex;">
+        <div class="font">
+            <div class="contenedor">
+                <h1>EDUCACIÓN</h1> <button (click)="openDialogEdu()">Nuevo</button>
+            </div>
+            <hr>
+            <br>
+            <div *ngFor="let escuela of escuelas">
+                <div class="escInfo" id="inf">
+                    <strong> {{escuela.nombreEscuela}}</strong><br>
+                    {{escuela.generacion}} <br>
+                    {{escuela.tipo}} <br>
+                    {{escuela.comentario}} <br>
+                </div>
+                <div class="escButtons" id="bt">
+                    <button type="submit" class="btn btn-danger" (click)="deleteEscuela(escuela.idEscuela)">Delete</button> &nbsp;
+                    <button type="submit" class="btn btn-dark" (click)="openDialogEduU(escuela.idEscuela, escuela.nombreEscuela, escuela.generacion, escuela.tipo, escuela.comentario)">Edit</button>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+    <br>
+</section>
+
+<section id="habil">
+    <div class="container">
+        <h1>HABILIDADES</h1>
+        <hr>
+        <br>
+        <div *ngFor="let habilidad of habilidades">
+            <div>
+                <div class="contenedor">
+                    <h4>{{habilidad.nombreHabilidad}}</h4>
+                    <button (click)="openDialogHab()" style="margin-top: -6px;">Nuevo</button>
+                </div>
+                <div *ngFor="let tipoHabilidad of tipoHabilidades">
+                    <div *ngIf="tipoHabilidad.habilidad==habilidad.idHabilidad" style="display: flex;">
+                        <ul>
+                            <li class="font">{{tipoHabilidad.nombreTipo}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<progress max="100" value={{tipoHabilidad.porcentaje}}></progress></li>
+                        </ul>
+                    <button type="submit" (click)="deleteHab(tipoHabilidad.idHabs)" class="btn btn-danger" style="width: 75px; height: 30px; margin-left: 15px; text-align: center; padding-right: 12px; padding-bottom: 30px;">Delete</button> &nbsp;
+                    <button type="submit" (click)="openDialogHab()" class="btn btn-dark" style="width: 75px; height: 30px; margin-left: 8px; text-align: center; padding-right: 12px; padding-bottom: 30px;">Edit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</section>
+
+<section id="contac">
+    <div class="container" style="height: 600px;">
+        <div class="contenedor">
+            <h1>CONTÁCTAME</h1> <button (click)="openDialogCont()">Nuevo</button>
+        </div>
+        <hr>
+        <br>
+
+        <div class="perso">
+            <div style="display: flex;" *ngFor="let contacto of contactos">
+                <div class="font">
+
+                    <img src={{contacto.foto}} alt="">&nbsp;&nbsp;{{contacto.info}} <br>
+        
+        
+                    
+                </div>
+                <button type="submit" class="btn btn-danger" (click)="deleteContact(contacto.idContactame)" style="width: 75px; height: 30px; margin-left: 8px; text-align: center; padding-right: 12px; padding-bottom: 30px; margin-top: 20px;">Delete</button>
+                    &nbsp;
+                    <button type="submit" (click)="openDialogCont()" class="btn btn-dark" style="width: 75px; height: 30px; margin-left: 8px; text-align: center; padding-right: 12px; padding-bottom: 30px; margin-top: 20px;">Edit</button>
+                    <br>
+            </div>
+        </div>
+        <div class="mapa">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d233.33640371287174!2d-87.07820596688502!3d20.654013484967546!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1654046457254!5m2!1ses!2smx"
+                width="600px" height="380px " style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>

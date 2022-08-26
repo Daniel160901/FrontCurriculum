@@ -1,0 +1,34 @@
+section{
+    width: 100%; 
+    height: 200px; 
+    background-color: #000;
+}
+
+div .left{
+    float: left; 
+    width: 65%; 
+    line-height: 75px;
+    font-size: 23px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+div .left a{
+    text-decoration: none;
+    color: #FFFF;
+}
+
+div .right{
+    text-align: center;
+    float: right; 
+    width: 35%; 
+    line-height: 70px;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-left: -150px;
+}
+
+div .right a{
+    text-decoration: none;
+    color: #FFFF;
+}

@@ -1,0 +1,40 @@
+section{
+    max-height: auto;
+}
+
+h1 {
+    color: rgb(100, 105, 109);
+    font-weight: bold;
+}
+
+hr{
+    width: 150px; 
+    border: 5px solid #000000;
+}
+
+div .left1{
+    float: left; 
+    width: 50%;
+    height: 220px;
+}
+
+
+div .right1{
+    float: right; 
+    width: 50%;
+    height: 220px;
+}
+
+div .left2{
+    float: left; 
+    width: 50%;
+    height: 200px;
+}
+
+
+div .right2{
+    float: right; 
+    width: 50%;
+    height: 200px;
+}
+
